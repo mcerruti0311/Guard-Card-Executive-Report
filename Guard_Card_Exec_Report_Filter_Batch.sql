@@ -7,7 +7,10 @@ SELECT Id,
 FROM Contact
 WHERE Employment_Status__c = 'Active'
   AND (
-    Email = 'taugust@sis.us'
+    Email IN (
+      'bwhite@sis.us',
+      'taugust@sis.us' 
+    )
     OR (
       Department = 'SIS Corp Licensing'
       AND Title IN (
@@ -23,6 +26,6 @@ WHERE Employment_Status__c = 'Active'
         'Sr. Manager'
       )
     )
-    OR Email = 'bwhite@sis.us'
+
   )
 ORDER BY LASTNAME, FIRSTNAME, Email ASC
