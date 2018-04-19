@@ -1,9 +1,9 @@
 SELECT Id,
-  LastName,
-  FirstName,
-  Title,
   Department,
-  Email
+  Email,
+  FirstName,
+  LastName,
+  Title
 FROM Contact
 WHERE Employment_Status__c = 'Active'
   AND Title IN (
